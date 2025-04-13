@@ -9,3 +9,7 @@ class BookRepository(ABC):
     @abstractmethod
     def save(self, book: Book):
         pass
+
+    @abstractmethod
+    def find_all(self):
+        pass

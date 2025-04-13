@@ -1,7 +1,10 @@
 class Book:
-    def __init__(self, id: int, title: str):
-        self.id = id
+    def __init__(self, book_id: int, title: str, category: str, author: str, quantity: int):
+        self.id = book_id
         self.title = title
+        self.category = category
+        self.author = author
+        self.quantity = quantity
         self.available = True
 
     def borrow(self):
@@ -11,3 +14,7 @@ class Book:
 
     def return_book(self):
         self.available = True
+    
+    def __str__(self):
+        return f"Book(id={self.id}, title='{self.title}', category='{self.category}', author='{self.author}')"
+

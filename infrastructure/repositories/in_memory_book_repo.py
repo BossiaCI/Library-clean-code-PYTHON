@@ -13,3 +13,6 @@ class InMemoryBookRepository(BookRepository):
 
     def save(self, book: Book):
         self.books[book.id] = book
+    
+    def find_all(self):
+        return list(self.books.values())
